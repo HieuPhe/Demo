@@ -387,3 +387,92 @@ body {
     font-size: 40px;
   }
 }
+
+@media (max-width: 900px) {
+  /* Cấu trúc chung */
+  .card {
+    grid-template-columns: 1fr;
+    border-width: 3px;
+    margin: 20px auto;
+  }
+
+  .left {
+    padding: 40px 24px;
+  }
+
+  .title .save,
+  .title .date {
+    font-size: 72px;
+  }
+
+  .title .the {
+    font-size: 32px;
+  }
+
+  .rule-row {
+    width: 90%;
+    gap: 20px;
+  }
+
+  /* Code input */
+  .code-block {
+    margin-top: 16px;
+  }
+
+  .code-input-wrap {
+    border-width: 1.4px;
+    padding: 6px 10px;
+  }
+
+  .code-input {
+    width: 90px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    padding: 8px 0;
+    background: #fff8f0;
+    border-radius: 6px;
+    -webkit-appearance: none; /* iOS fix */
+  }
+
+  .code-input:focus {
+    outline: 2px solid #b28e6b;
+    background: #fff;
+  }
+
+  .code-btn {
+    font-size: 26px;
+    padding: 8px 14px;
+  }
+
+  .code-error {
+    font-size: 15px;
+    min-height: 20px;
+  }
+
+  /* Hero photo frame */
+  .right {
+    padding: 16px;
+  }
+
+  .photo-frame {
+    width: 90%;
+    padding: 10px 10px 40px;
+  }
+
+  .hero-track {
+    aspect-ratio: 3 / 4;
+  }
+
+  .frame-ornament {
+    bottom: 10px;
+    width: 140px;
+  }
+
+  /* Căn chỉnh cho màn hình dài */
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

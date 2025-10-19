@@ -186,21 +186,67 @@ body {
   }
 }
 
-/* Mobile */
+/* ===================================
+   📱 Responsive iPhone 12 Pro Max
+   =================================== */
 @media (max-width: 900px) {
+  .canvas {
+    padding: 16px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
-  .letter .text {
-    min-height: 260px;
+
+  .art {
+    min-height: 320px;
   }
+
+  .tree {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+  }
+
   .postmark {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    top: 8px;
+    right: 8px;
   }
+
+  .letter h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .letter .text {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 0 8px;
+  }
+
+  .divider {
+    width: 140px;
+  }
+
+  .signature {
+    font-size: 28px;
+    text-align: right;
+    margin-top: 18px;
+  }
+
   .start {
     position: fixed;
-    right: 16px;
-    bottom: 16px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+
+  .start svg {
+    width: 20px;
+    height: 20px;
   }
 }
