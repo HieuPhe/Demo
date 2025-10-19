@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Soft scallop frame curve -->
+    <path d="M 420 70
+             C 328 70, 300 110, 260 150
+             C 220 190, 170 210, 110 210
+             C 60 210, 28 188, 10 168" opacity=".55"/>
+             
+    <!-- Main flourish curve -->
+    <path d="M 410 40
+             C 330 44, 292 84, 248 132
+             C 208 176, 156 198, 108 198
+             C 70 198, 38 184, 18 168" />
+             
+    <!-- Side return curve -->
+    <path d="M 300 62
+             C 254 78, 214 116, 184 150
+             C 158 178, 130 190, 98 190" opacity=".8"/>
+             
+    <!-- Bud clusters (small circles) -->
+    <g>
+      <circle cx="286" cy="88" r="5.5"/>
+      <circle cx="267" cy="105" r="4.2"/>
+      <circle cx="249" cy="124" r="3.6"/>
+      <circle cx="226" cy="146" r="3.2"/>
+    </g>
+    <g>
+      <circle cx="176" cy="170" r="3.2"/>
+      <circle cx="160" cy="179" r="2.8"/>
+      <circle cx="145" cy="186" r="2.6"/>
+    </g>
+    
+    <!-- Short accent strokes around buds -->
+    <path d="M 292 82 l 10 -6" />
+    <path d="M 272 100 l 11 -5" />
+    <path d="M 254 118 l 10 -4" />
+    <path d="M 232 140 l 9 -3" />
+    <path d="M 180 166 l 8 -3" opacity=".9"/>
+    <path d="M 164 175 l 7 -3" opacity=".9"/>
+    <path d="M 149 182 l 6 -2" opacity=".9"/>
+    
+    <!-- Small leaves (teardrop) -->
+    <path d="M 310 72
+             C 320 60, 340 58, 352 66
+             C 338 74, 324 78, 310 72 Z" opacity=".9"/>
+    <path d="M 208 154
+             C 214 144, 228 140, 238 144
+             C 228 152, 218 156, 208 154 Z" opacity=".9"/>
+             
+    <!-- Micro dots for delicacy -->
+    <g opacity=".85">
+      <circle cx="296" cy="76" r="1.6"/>
+      <circle cx="278" cy="94" r="1.6"/>
+      <circle cx="260" cy="112" r="1.6"/>
+      <circle cx="238" cy="134" r="1.6"/>
+      <circle cx="170" cy="174" r="1.4"/>
+      <circle cx="154" cy="182" r="1.4"/>
+    </g>
+  </g>
+</svg>

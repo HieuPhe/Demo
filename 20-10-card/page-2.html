@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Greeting Inside</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Cormorant+Garamond:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="page-2.css" />
+  </head>
+  <body>
+    <main class="canvas">
+      <div class="grid">
+        <!-- CỘT TRÁI: ẢNH CÂY THÔNG -->
+        <section class="art">
+          <img
+            class="tree"
+            src="assets/flower_2.png"
+            alt=""
+            onerror="this.classList.add('fallback')"
+          />
+          <!-- Con dấu bưu chính (nhúng SVG) -->
+          <svg class="postmark" viewBox="0 0 120 120" aria-hidden="true">
+            <g fill="none" stroke="var(--soft)" stroke-width="2">
+              <circle cx="60" cy="60" r="36" />
+              <circle cx="60" cy="60" r="46" stroke-dasharray="2 4" />
+              <path
+                d="M88 26c8 2 16 2 22-2M88 36c10 3 20 3 28-1M88 46c8 2 16 2 22-2"
+              />
+            </g>
+            <g fill="var(--soft)">
+              <text
+                x="60"
+                y="58"
+                text-anchor="middle"
+                font-size="10"
+                font-family="serif"
+              >
+                HAPPY
+              </text>
+              <text
+                x="60"
+                y="72"
+                text-anchor="middle"
+                font-size="10"
+                font-family="serif"
+              >
+                20-10
+              </text>
+            </g>
+          </svg>
+        </section>
+
+        <!-- CỘT PHẢI: THƯ -->
+        <section class="letter">
+          <h2>My dearly beloved,</h2>
+          <!-- dải trang trí -->
+          <svg class="divider" viewBox="0 0 300 30" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M10 15 H120" opacity=".75" />
+              <path d="M180 15 H290" opacity=".75" />
+              <path d="M150 15 q-10 4 -14 8 m14 -8 q10 4 14 8" opacity=".9" />
+              <path d="M132 23 q-6 -6 0 -12" />
+              <path d="M168 23 q6 -6 0 -12" />
+            </g>
+          </svg>
+
+          <div id="letterText" class="text"></div>
+          <div class="signature" id="signature"></div>
+
+          <!-- Nút phong bì -->
+          <button class="start" id="startBtn" type="button" title="Open letter">
+            <!-- Icon phong bì -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2 .3V8l8 5 8-5V6.8l-8 5.1-8-5.1Z"
+              />
+            </svg>
+            <span>Open letter</span>
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <script src="page-2.js"></script>
+  </body>
+</html>

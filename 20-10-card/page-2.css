@@ -1,0 +1,206 @@
+:root {
+  --paper: #efe5d6; /* nền giấy */
+  --ink: #6c4b35; /* màu mực nâu */
+  --soft: #c4b29b; /* nhạt để viền/con dấu */
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: radial-gradient(
+      1200px 600px at 0% 0%,
+      #f5ecd9 0%,
+      #efe5d6 60%,
+      #e7dcc9 100%
+    ),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Khung tổng */
+.canvas {
+  max-width: 1100px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 28px 26px 34px;
+  position: relative;
+  background: linear-gradient(#0000 6px, #0000) padding-box, var(--paper);
+  border-radius: 14px;
+  overflow: hidden;
+}
+/* góc bo nhẹ như giấy */
+.canvas::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Lưới 2 cột: trái hình – phải thư */
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* KHỐI HÌNH CÂY THÔNG */
+.art {
+  position: relative;
+  min-height: 420px;
+}
+.tree {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  object-fit: contain;
+  filter: saturate(0.92) contrast(0.98);
+  border-radius: 8px;
+}
+
+.tree.fallback {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #dedede;
+  border-radius: 8px;
+}
+
+/* Con dấu bưu chính (SVG) */
+.postmark {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+}
+
+/* KHU VỰC THƯ */
+.letter {
+  position: relative;
+  padding: 10px 10px 10px 6px;
+}
+.letter h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  margin: 0 0 10px;
+  letter-spacing: 0.3px;
+}
+.letter .text {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.9;
+  color: #4a2f1f;
+}
+.signature {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  color: #633b24;
+  letter-spacing: 0.5px;
+}
+
+/* Nút phong bì để bắt đầu */
+.start {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.start:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.7);
+}
+.start svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Dải trang trí mờ ở đáy */
+.divider {
+  width: 180px;
+  height: 20px;
+  margin: 8px 0 6px;
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+/* Hiệu ứng xuất hiện từng ký tự (JS thao tác nội dung) */
+.caret {
+  display: inline-block;
+  width: 0.6ch;
+  color: var(--ink);
+  animation: blink 1s step-end infinite;
+}
+
+.fade-line {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(6px);
+  transition: opacity 1.8s ease, transform 2s ease, filter 2s ease;
+}
+.fade-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.signature {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.signature.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.start.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .letter .text {
+    min-height: 260px;
+  }
+  .postmark {
+    width: 90px;
+    height: 90px;
+  }
+  .start {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+  }
+}
