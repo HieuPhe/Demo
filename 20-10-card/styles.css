@@ -476,3 +476,22 @@ body {
     justify-content: center;
   }
 }
+
+.code-input-wrap,
+.code-input,
+.code-btn {
+  position: relative;
+  z-index: 10; /* luôn nổi trên mọi phần khác */
+}
+
+.code-input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fffdf8;
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+.code-input-wrap.invalid {
+  z-index: 12;
+}
