@@ -12,15 +12,41 @@
   </head>
   <body>
     <main class="card" role="main" aria-label="Save The Date Card">
-      <!-- LEFT -->
+      <!-- RIGHT (đưa lên trước) -->
+      <section class="right">
+        <div class="photo-frame hero" aria-label="Wedding hero images">
+          <div class="hero-track" id="heroTrack">
+            <!-- Thay đường dẫn ảnh cố định của bạn ở đây -->
+            <figure class="hero-slide">
+              <img src="assets/hero_1.png" alt="" />
+            </figure>
+          </div>
+
+          <!-- họa tiết line dưới ảnh -->
+          <svg class="frame-ornament" viewBox="0 0 300 30" aria-hidden="true">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M10 15 H120" opacity=".75" />
+              <path d="M180 15 H290" opacity=".75" />
+              <path d="M150 15 q-10 4 -14 8 m14 -8 q10 4 14 8" opacity=".9" />
+              <path d="M132 23 q-6 -6 0 -12" />
+              <path d="M168 23 q6 -6 0 -12" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- LEFT (chuyển xuống sau) -->
       <section class="left">
         <!-- Góc hoa văn -->
         <img class="corner c-tl" src="assets/corner.svg" alt="" />
-        <!-- Phải trên -->
         <img class="corner c-tr" src="assets/corner.svg" alt="" />
-        <!-- Trái dưới -->
         <img class="corner c-bl" src="assets/corner.svg" alt="" />
-        <!-- Phải dưới -->
         <img class="corner c-br" src="assets/corner.svg" alt="" />
 
         <div class="inner">
@@ -61,40 +87,12 @@
             </form>
           </div>
 
-          <!-- (tuỳ chọn) bạn vẫn có thể giữ lại ngày/địa chỉ bên dưới -->
           <p class="date-text">20 October, 2035</p>
           <p class="addr">Ha Noi</p>
         </div>
       </section>
-
-      <!-- RIGHT -->
-      <section class="right">
-        <div class="photo-frame hero" aria-label="Wedding hero images">
-          <div class="hero-track" id="heroTrack">
-            <!-- Thay đường dẫn ảnh cố định của bạn ở đây -->
-            <figure class="hero-slide">
-              <img src="assets/hero_1.png" alt="" />
-            </figure>
-          </div>
-
-          <!-- họa tiết line dưới ảnh -->
-          <svg class="frame-ornament" viewBox="0 0 300 30" aria-hidden="true">
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M10 15 H120" opacity=".75" />
-              <path d="M180 15 H290" opacity=".75" />
-              <path d="M150 15 q-10 4 -14 8 m14 -8 q10 4 14 8" opacity=".9" />
-              <path d="M132 23 q-6 -6 0 -12" />
-              <path d="M168 23 q6 -6 0 -12" />
-            </g>
-          </svg>
-      </section>
     </main>
+
     <script></script>
     <script src="script.js"></script>
   </body>

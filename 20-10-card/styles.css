@@ -495,3 +495,103 @@ body {
 .code-input-wrap.invalid {
   z-index: 12;
 }
+
+@media (max-width: 500px) {
+  /* Chuyển bố cục card sang dọc */
+  .card {
+    display: flex;
+    flex-direction: column; /* Ảnh (right) ở trên, nội dung (left) ở dưới */
+    gap: 14px;
+    margin: 16px;
+    max-width: 100%;
+  }
+
+  /* Ẩn đường chia dọc nếu có */
+  .card::before {
+    display: none;
+  }
+
+  /* Đặt thứ tự: .right (ảnh) -> trước, .left (nội dung+input) -> sau */
+  .right {
+    order: 0;
+    width: 100%;
+    padding: 8px 10px 0;
+  }
+  .left {
+    order: 1;
+    width: 100%;
+    padding: 20px 14px 18px;
+  }
+
+  /* Khung ảnh: vừa màn, không che chi tiết */
+  .photo-frame {
+    width: min(420px, 92vw);
+    margin: 0 auto 10px;
+    padding: 10px 10px 32px; /* chừa viền dưới cho khung */
+    box-sizing: border-box;
+  }
+
+  /* Tỉ lệ khu ảnh + cách fill ảnh */
+  .hero-track {
+    height: min(
+      520px,
+      62vh
+    ); /* giới hạn chiều cao để không “đè” nội dung dưới */
+    aspect-ratio: auto;
+  }
+  .hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* phủ kín nhưng không méo */
+    object-position: center 20%; /* đẩy trọng tâm lên để không che phần mặt/chi tiết */
+  }
+
+  /* Giảm kích thước corner để không che chữ/ảnh */
+  .corner {
+    width: 96px;
+    height: 96px;
+    opacity: 0.6;
+  }
+
+  /* Nhóm input code: nổi rõ và dưới ảnh */
+  .code-input-wrap {
+    margin: 14px auto 0;
+    padding: 8px 12px;
+    border-radius: 20px;
+    max-width: 80%;
+  }
+  .code-input {
+    width: 120px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 6px 0;
+  }
+  .code-btn {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+
+  /* Chữ lớn phía trên bớt tràn (nếu có) */
+  .title .save,
+  .title .date {
+    font-size: clamp(48px, 18vw, 72px);
+    line-height: 0.95;
+  }
+  .title .the {
+    font-size: 26px;
+  }
+
+  /* Tối ưu thao tác chạm iOS */
+  .start,
+  .code-btn,
+  .upload {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html,
+  body,
+  input,
+  button {
+    -webkit-text-size-adjust: 100%;
+  }
+}
