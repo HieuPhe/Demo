@@ -9,9 +9,9 @@ const LETTER = [
   "Hành trình phía trước còn rất dài anh mong chúng ta sẽ luôn có nhau.",
   "Mỗi khi tâm trạng của em không tốt, hãy gửi cho anh một tin nhắn. Mỗi khi có chuyện gì đó xảy tới với em, anh sẽ luôn lắng nghe và đồng hành cùng em.",
   "Sự ấm áp mà thé giới này nợ em, anh sẽ dành cho em.",
-    "Chúc mừng phụ nữ Việt Nam, yêu em."
+    "Chúc mừng ngày phụ nữ Việt Nam, yêu em."
 ];
-const SIGN = "From";
+const SIGN = "From Hiếu Phệ";
 
 let playing = false;
 
